@@ -718,35 +718,35 @@
 	"mmd2": {
 		"prefix": "mmd2",
 		"body": [
-			"@media (min-width:\\$tablet){\n\t $0 \n}"
+			"@media (min-width:\\$tablet){\n\t$0\n}"
 		],
 		"description": "md1"
 	},
 	"md3": {
 		"prefix": "md3",
 		"body": [
-			"@media (max-width:\\$mobile){\n\t $0 \n}"
+			"@media (max-width:\\$mobile){\n\t$0\n}"
 		],
 		"description": "md3"
 	},
 	"mmd3": {
 		"prefix": "mmd3",
 		"body": [
-			"@media (min-width:\\$mobile){\n\t $0 \n}"
+			"@media (min-width:\\$mobile){\n\t$0\n}"
 		],
 		"description": "md1"
 	},
 	"md4": {
 		"prefix": "md4",
 		"body": [
-			"@media (max-width:\\$mobileSmall){\n\t $0 \n}"
+			"@media (max-width:\\$mobileSmall){\n\t$0\n}"
 		],
 		"description": "md4"
 	},
 	"mmd4": {
 		"prefix": "mmd4",
 		"body": [
-			"@media (min-width:\\$mobileSmall){\n\t $0 \n}"
+			"@media (min-width:\\$mobileSmall){\n\t$0\n}"
 		],
 		"description": "md1"
 	},
@@ -1079,15 +1079,15 @@
 		"scope": "css",
 		"prefix": "pp",
 		"body": [
-			"padding: 0px 0px 0px 0px;"
+			"padding: rem(0) rem(0) rem(0) rem(0);"
 		],
 		"description": "padding"
 	},
 	"Margin CSS": {
 		"scope": "css",
-		"prefix": "pp",
+		"prefix": "m",
 		"body": [
-			"margin: 0px 0px 0px 0px;"
+			"margin: rem(0) rem(0) rem(0) rem(0);"
 		],
 		"description": "padding"
 	},

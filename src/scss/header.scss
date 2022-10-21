@@ -1,34 +1,130 @@
 //====================================================================================================
 .header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
 	// .header__container
 	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(15);
+		min-height: rem(123);
+		@media (max-width: $mobile) {
+			min-height: rem(60);
+		}
 	}
 	// .header__logo
 	&__logo {
+		position: relative;
+		z-index: 5;
 	}
 	// .header__menu
 	&__menu {
 	}
 	// .header__button
 	&__button {
+		position: relative;
+		z-index: 5;
+		border: rem(1) solid #f1f1f1;
+		border-radius: rem(8);
+		padding: rem(15) rem(24);
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		transition: all 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: $purpurColor;
+				border: rem(1) solid $purpurColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			padding: rem(10) rem(15);
+			color: #fff;
+			border: rem(1) solid $mainColor;
+			background-color: $mainColor;
+		}
+	}
+	// .header__actions
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
 	}
 }
 //=================================
 .menu {
-	// .menu__icon
 	&__icon {
 	}
 	// .menu__body
 	&__body {
+		//тело шторки
+		@media (max-width: $mobile) {
+			position: fixed;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			transition: left 0.3s ease;
+			background-color: $purpurColor;
+			padding: rem(80) rem(15) rem(30) rem(15);
+			&::before {
+				// добавлено, чтобы меню ездило (скролл)
+				content: "";
+				position: fixed;
+				top: 0;
+				left: -100%;
+				transition: left 0.3s ease;
+				width: 100%;
+				height: rem(60);
+				background-color: #b6b0f1;
+				z-index: 2;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					content: "";
+					left: 0;
+				}
+			}
+		}
 	}
 	// .menu__list
 	&__list {
+		@media (min-width: $mobile) {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: rem(5);
+			@include adaptiveValue("column-gap", 56, 35, 0, 1200, 768);
+		}
 	}
 	// .menu__item
 	&__item {
+		text-align: right;
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
 	}
 	// .menu__link
 	&__link {
+		font-weight: 500;
+		line-height: math.div(19, 16);
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $purpurColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			color: #fff;
+			font-size: rem(32);
+		}
 	}
 }
 
@@ -38,7 +134,7 @@
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -46,6 +142,7 @@
 		position: relative;
 		width: rem(30);
 		height: rem(18);
+		flex: 0 0 rem(30); // добавлено
 		z-index: 5;
 		@media (any-hover: none) {
 			cursor: default;
@@ -70,7 +167,7 @@
 		span {
 			top: calc(50% - rem(1));
 		}
-		&.menu-open {
+		.menu-open & {
 			span {
 				width: 0;
 			}
@@ -88,4 +185,3 @@
 		}
 	}
 }
-*/
