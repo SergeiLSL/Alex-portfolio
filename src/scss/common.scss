@@ -1,8 +1,18 @@
 // Заголовки, общие БЄМ блоки и проче...
+.page {
+	// .page__main
+	&__main {
+	}
+	// .page__services
+	&__services {
+	}
+}
+
+//========================================================================================================================================================
 .title {
 	// .title__label
 	&__label {
-		text-transform: uppercase;
+		//text-transform: uppercase;
 		font-weight: 500;
 		font-size: rem(12);
 		line-height: 2;
@@ -27,6 +37,44 @@
 		font-weight: 700;
 		font-size: rem(36);
 		line-height: 1.25;
+		span {
+			color: $purpurColor;
+		}
+		// .title__value_big
+		&_big {
+			font-size: rem(55);
+			line-height: math.div(55, 44);
+		}
 	}
 }
+
+//========================================================================================================================================================
+.text {
+	line-height: math.div(32, 16);
+	p {
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+}
+
+//========================================================================================================================================================
+.social {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	row-gap: rem(5);
+	@include adaptiveValue("column-gap", 34, 25);
+	// .social__link
+	&__link {
+		font-size: rem(22);
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $purpurColor;
+			}
+		}
+	}
+}
+
 //========================================================================================================================================================

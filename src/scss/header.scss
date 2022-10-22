@@ -1,16 +1,20 @@
 //====================================================================================================
 .header {
+	background: #d4e2fd;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 100;
+	background-color: rgba(255, 255, 255, 0.75);
 	// .header__container
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: rem(15);
+		padding-bottom: rem(5);
+		padding-top: rem(5);
 		min-height: rem(123);
 		@media (max-width: $mobile) {
 			min-height: rem(60);
@@ -124,11 +128,13 @@
 		@media (max-width: $mobile) {
 			color: #fff;
 			font-size: rem(32);
+			&:hover {
+				color: #fff;
+				text-decoration: underline;
+			}
+
 		}
 	}
-}
-
-.icon-menu {
 }
 
 //====================================================================================================

@@ -7,12 +7,72 @@
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
-		<main class="page">
+		<main data-fp class="page">
+			<!-- поэкранная прокурутка time 01:42:35
+			https://www.youtube.com/watch?v=c3kgbhCWlF4 -->
+			<section data-fp-section class="page__main main-section">
+				<div class="main-section__container">
+					<div class="main-section__content">
+						<div class="main-section__title title">
+							<div class="title__label">MY NAME IS</div>
+							<h1 class="title__value title__value_big">Alex <span>Smith.</span></h1>
+						</div>
+						<div class="main-section__text text">
+							<p>
+							Creative front-end developer with more than +5 years of experience in enterprise companies
+							and startups. Proficient in JavaScript, Angular, and React. Passionate about UI/UX
+							</p>
+						</div>						
+						<div class="main-section__social social">
+							<a href="" class="social__link _icon-s-instagram"></a>
+							<a href="" class="social__link _icon-s-github"></a>
+							<a href="" class="social__link _icon-s-twitter"></a>
+							<a href="" class="social__link _icon-s-linkedin"></a>
+						</div>
+					</div>
+					<div class="main-section__decor decor-main-section">
+						<div class="decor-main-section__box">
+							<div class="decor-main-section__image">
+								<img class="decor-main-section__picture" src="@img/main/picture.png" alt="picture">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-			<!-- <div class="title">
-				<div class="title__label">LEARNING PATH</div>
-				<h2 class="title__value">Education & Skills</h2>
-			</div> -->
+			<section data-fp-section class="page__services services">
+				<div class="services__container">
+					<div class="services__title title">
+						<div class="title__label">SERVICES</div>
+						<h2 class="title__value">Specialized in</h2>
+					</div>
+					<div class="services__items">
+						<article class="services__item item-service">
+							<div class="item-service__icon">
+								<img src="@img/services/icons/01.svg" alt="Icon">
+							</div>
+							<h4 class="item-service__title">UI/UX Design</h4>
+							<div class="item-service__text">Turn what you have in mind of a digital product into reality. For any platform you consider.</div>
+						</article>
+						<article class="services__item item-service">
+							<div class="item-service__icon">
+								<img src="@img/services/icons/02.svg" alt="Icon">
+							</div>
+							<h4 class="item-service__title">Application Development</h4>
+							<div class="item-service__text">Standard designing, building, and implementing your applications with documentation.
+							</div>
+						</article>
+						<article class="services__item item-service">
+							<div class="item-service__icon">
+								<img src="@img/services/icons/03.svg" alt="Icon">
+							</div>
+							<h4 class="item-service__title">Web Development</h4>
+							<div class="item-service__text">Create and maintain your websites and also take care of its performance and traffic capacity.</div>
+						</article>
+					</div>
+				</div>
+
+			</section>
 
 		</main>
 		@@include('html/_footer.htm',{})
