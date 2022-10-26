@@ -6,6 +6,9 @@
 	// .page__services
 	&__services {
 	}
+	// .page__portfolio
+	&__portfolio {
+	}
 }
 
 //========================================================================================================================================================
@@ -35,15 +38,15 @@
 	&__value {
 		font-family: "Plus Jakarta Sans";
 		font-weight: 700;
-		font-size: rem(36);
 		line-height: 1.25;
+		@include adaptiveValue("font-size", 36, 28);
 		span {
-			color: $purpurColor;
+			color: $purpleColor;
 		}
 		// .title__value_big
 		&_big {
-			font-size: rem(55);
 			line-height: math.div(55, 44);
+			@include adaptiveValue("font-size",44, 36);
 		}
 	}
 }
@@ -71,10 +74,28 @@
 		transition: color 0.3s ease;
 		@media (any-hover: hover) {
 			&:hover {
-				color: $purpurColor;
+				color: $purpleColor;
 			}
 		}
 	}
 }
 
+//========================================================================================================================================================
+.category-link {
+	display: inline-block;
+	border: rem(1) solid #f1f1f1;
+	border-radius: rem(4);
+	color: $greyColor;
+	font-size: rem(12);
+	line-height: math.div(15, 12);
+	padding: rem(4) rem(8);
+	transition: all 0.3 ease;
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fff;
+			background-color: $purpleColor;
+			border: rem(1) solid $purpleColor;
+		}
+	}
+}
 //========================================================================================================================================================
