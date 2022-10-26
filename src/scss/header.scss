@@ -41,8 +41,8 @@
 		@media (any-hover: hover) {
 			&:hover {
 				color: #fff;
-				background-color: $purpurColor;
-				border: rem(1) solid $purpurColor;
+				background-color: $purpleColor;
+				border: rem(1) solid $purpleColor;
 			}
 		}
 		@media (max-width: $mobile) {
@@ -74,7 +74,7 @@
 			height: 100%;
 			overflow: auto;
 			transition: left 0.3s ease;
-			background-color: $purpurColor;
+			background-color: $purpleColor;
 			padding: rem(80) rem(15) rem(30) rem(15);
 			&::before {
 				// добавлено, чтобы меню ездило (скролл)
@@ -122,7 +122,7 @@
 		transition: color 0.3s ease;
 		@media (any-hover: hover) {
 			&:hover {
-				color: $purpurColor;
+				color: $purpleColor;
 			}
 		}
 		@media (max-width: $mobile) {
@@ -132,7 +132,6 @@
 				color: #fff;
 				text-decoration: underline;
 			}
-
 		}
 	}
 }
