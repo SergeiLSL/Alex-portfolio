@@ -9,12 +9,14 @@
 	// .page__works
 	&__works {
 	}
-
+	// .page__career
+	&__career {
+	}
 	// .page__blog
 	&__blog {
 	}
-	// .page__testimonials
-	&__testimonials {
+	// .page__clients
+	&__clients {
 	}
 }
 
@@ -88,3 +90,15 @@
 }
 
 //========================================================================================================================================================
+.skils {
+	display: inline-block;
+	background-color: #FBFBFB;
+	// width: fit-content; // ширина по контенту
+	color: $greyColor;
+	border: rem(1) solid #f1f1f1;
+	border-radius: rem(4);
+	padding: rem(4) rem(8);
+	font-size: rem(12);
+	line-height: math.div(15, 12);
+	font-weight: 500;
+}

@@ -36,7 +36,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
-			spaceBetween: 56,
+			spaceBetween: 56,			
 			autoHeight: true,
 			speed: 800,
 
@@ -78,27 +78,29 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 15,
 					autoHeight: true,
+					maxwidth: 290,
+				},
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+					maxwidth: 450,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
 					slidesPerView: 3,
-					spaceBetween: 20,
+					spaceBetween: 40,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
+				// 1268: {
+				// 	slidesPerView: 4,
+				// 	spaceBetween: 30,
+				// },
 			},
-			*/
+
 			// События
 			on: {
 

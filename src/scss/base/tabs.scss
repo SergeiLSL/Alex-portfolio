@@ -2,9 +2,19 @@
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
+		flex-direction: column;
 	}
 	// .tabs__title
 	&__title {
+		display: inline-flex;
+		padding: rem(14) rem(0) rem(14) rem(24);
+		@media (any-hover: hover) {
+			&:hover {
+			}
+		}
+		&._fw {
+			width: 100%;
+		}
 		border: 1px solid #eee;
 		padding: rem(10) rem(15);
 		border-radius: rem(5);
