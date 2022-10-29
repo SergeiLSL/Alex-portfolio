@@ -407,7 +407,7 @@
 	&__text {
 		line-height: 32px;
 		line-height: math.div(32, 16);
-		color:$greyColor;
+		color: $greyColor;
 	}
 	// .item-blog__link
 	&__link {
@@ -496,9 +496,119 @@
 //========================================================================================================================================================
 //========================================================================================================================================================
 
-//========================================================================================================================================================
-//========================================================================================================================================================
+.skils {
+	// .skils__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: rem(80);
+		padding-bottom: rem(30);
+	}
+	// .skils__title
+	&__title {
+		@include adaptiveValue("margin-bottom", 112, 30);
+	}
+	// .skils__body
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	// .skils__timeline
+	&__timeline {
+	}
+	// .skils__content
+	&__content {
+	}
+}
+
+.timeline {
+	display: grid;
+	gap: rem(64);
+	position: relative;
+	&::before {
+		// левая вертикальная линия
+		content: "";
+		position: absolute;
+		left: rem(12);
+		top: em(3, 16);
+		height: 100%;
+		width: rem(1);
+		background-color: #f1f1f1;
+		// background-color: red;	
+	}
+	// .timeline__item
+	&__item { 		// кружочки на левой вертикальной линии
+		padding-left: rem(40);
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: rem(4);
+			top: em(1, 16);
+			width: rem(16);
+			height: rem(16);
+			z-index: 3;
+			border-radius: 50%;
+			background-color: #f1f1f1;
+			// background-color: red;			
+		}
+		&:last-child {
+			&::after{
+				content:'';
+				z-index: 2;
+				position: absolute;
+				width: rem(3);
+				height: 100%;
+				left: rem(12);
+				bottom: 0;
+				background-color: #fff;
+			}
+		}
+	}
+	// .timeline__title
+	&__title {
+		font-weight: 500;
+		line-height: math.div(20, 16);
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	// .timeline__text
+	&__text {
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+	// .timeline__date
+	&__date {
+		font-weight: 500;
+		line-height: math.div(17, 16);
+	}
+}
+
+.content-skils {
+	// .content-skils__text
+	&__text {
+	}
+	// .content-skils__items
+	&__items {
+	}
+	// .content-skils__item
+	&__item {
+	}
+	// .content-skils__label
+	&__label {
+	}
+	// .content-skils__line
+	&__line {
+	}
+}
 
 //========================================================================================================================================================
 //========================================================================================================================================================
 
+//========================================================================================================================================================
+//========================================================================================================================================================
